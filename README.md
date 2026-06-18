@@ -1,29 +1,30 @@
 # assignment_1_CS301
 
 База даних складається з 5 таблиць, які реалізують логіку роботи спорт-клубу:
-1) membership — підписки.
+1) membership — підписки(не багато даних,бо підписок достатньо)
 membership_id —  id абонемента
 name — назва підписки 
 price — вартість у гривнях
-2) members — відвідувачі
+2) members — відвідувачі(500)
 member_id — id клієнта
 full_name — ім'я та прізвище
 email — електронна пошта
 membership_id — яка підписка діє (зв'язок з memberships)
-3) coaches  — Тренери
+3) coaches  — Тренери(теж не багато, достатньо до 10)
 coach_id — id тренера
 name — ім'я тренера
 specialization — напрямок
-4) classes — розклад тренувань
+4) classes — розклад тренувань(теж не потребує багато)
 class_id — id тренування 
 name — назва тренування
 class_date — дата тренування 
 coach_id — хто веде тренування (зв'язок з coaches)
-5) bookings — Бронювання
+5) bookings — Бронювання(200)
 booking_id — id запису
 member_id — хто записався (зв'язок з members)
 class_id — на яке заняття (зв'язок з classes)
 booking_date — дата запису
+
 
 Є один CTE (club_analytic) 
 та віконні функції, які рахують кількість занять для клієнта(row_number) та кількість людей на занятті(count)
